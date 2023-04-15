@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ludo Board Game</title>
+    </head>
+    <body style="display:block; font-family:'Times New Roman', Times, serif; font-size: large;">
+        <h1 style="text-align: center; background-color: rgb(181, 221, 223)">Reviews</h1>
+        <div style="display: block; border: 2px solid cadetblue">
+            <div style="display:inline-block; margin-top: 3px; margin-bottom: 3px;">
+                <a href="./index.html"><button style="margin-left: 50px; margin-right: 300px; background-color: rgb(26, 51, 58); color: white" type="button" class="btn btn-primary">Home</button></a>
+                <a href="./info.html"><button style="margin-right: 300px; background-color: rgb(26, 51, 58); color: white" type="button" class="btn btn-secondary">History / Rules / Tips</button></a>
+                <a href="./reviews.html"><button style="margin-right: 300px; background-color: rgb(26, 51, 58); color: white" type="button" class="btn btn-primary">Reviews</button></a>
+                <a href="./about.html"><button style="margin-right: 50px; background-color: rgb(26, 51, 58); color: white" type="button" class="btn btn-primary">About</button></a>
+            </div>
+        </div>
+
+        <div id="reviewData">
+        </div>
+
+        <style>
+           .rev{
+                margin-top: 5px;
+                margin-left: 5px;             
+           }
+           .aform{
+            border: 2px rgb(26, 51, 58) solid;
+            border-radius: 10px;
+           }
+           .form{
+            background-color: rgb(232, 244, 245);
+            margin: 20px
+           }
+           .title{
+            text-align: center; 
+            padding-top: 20px;
+            text-decoration: underline;
+           }
+           .inputN{
+            width: 500px;
+            border-radius: 10px;
+           }
+           .inputR{
+            width: 512px;
+            border-radius: 10px;
+           }
+           .inputD{
+            width: 510px;
+            border-radius: 10px;
+           }
+           .feedback{
+            width: 800px;
+            border-radius: 10px;
+           }
+           .revbtn{
+            border-radius: 10px;
+            margin-left: 400px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: rgb(26, 51, 58);
+            color: white
+           }
+        </style>
+
+        <div style="background-color: rgb(181, 221, 223); align-content: center">
+        <div style="margin-left: 200px; margin-right: 200px;">
+            <h3 class="title">WE APPRECIATE YOUR REVIEW!</h3>
+            <div class="aform">
+            <form id="newReview" class="form">
+                <br>
+                <div style="margin: 0px 350px 20px 350px;"><b>Add Your Review</b></div>
+                <div class="rev">
+                    <span class="revDesc">Name</span> 
+                    <input class="inputN" type="text" id="name"></div>
+                <div class="rev">
+                    <span class="revDesc">Date</span> 
+                    <input class="inputD" type="date" id="date"></div>
+                <div class="rev">
+                    <span class="revDesc">Rate</span> 
+                    <select class="inputR" id="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="rev">
+                    <span class="revDesc">Feedback</span> 
+                    <input id="text" rows="3" class="feedback">
+                </div>
+                <button type="submit" class="revbtn" id="button">Submit</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </body>
+    <script src="data.js"></script>
+</html>
