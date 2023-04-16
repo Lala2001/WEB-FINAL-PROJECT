@@ -36,47 +36,50 @@
             text-decoration: underline;
            }
            .inputN{
-            width: 500px;
-            border-radius: 10px;
+            width: 422px;
            }
            .inputR{
-            width: 512px;
-            border-radius: 10px;
+            width: 440px;
            }
            .inputD{
-            width: 510px;
-            border-radius: 10px;
+            width: 435px;
            }
            .feedback{
-            width: 800px;
-            border-radius: 10px;
-           }
+            width: 399px;           }
            .revbtn{
-            border-radius: 10px;
-            margin-left: 400px;
+            margin-left: 225px;
             margin-top: 10px;
             margin-bottom: 10px;
             background-color: rgb(26, 51, 58);
-            color: white
+            color: white;
+            padding: 10px
            }
         </style>
 
-        <div style="background-color: rgb(181, 221, 223); align-content: center">
-        <div style="margin-left: 200px; margin-right: 200px;">
+        <div id="Form" style="background-color: rgb(181, 221, 223); align-content: center;">
+        <div id="divForm" style="margin-left: 400px; margin-right: 400px;">
             <h3 class="title">WE APPRECIATE YOUR REVIEW!</h3>
             <div class="aform">
             <form id="newReview" class="form">
                 <br>
-                <div style="margin: 0px 350px 20px 350px;"><b>Add Your Review</b></div>
+                <div style="margin: 0px 100px 20px 120px; display: flex">
+                    <img style="display: block; margin-right: 10px;"
+                        src="https://cdn-icons-png.flaticon.com/512/1356/1356326.png" width="50" height="50"
+                    >
+                    <h4>Add Your Review</h4>
+                    <img style="display: block; margin-right: 10px;"
+                        src="https://cdn-icons-png.flaticon.com/512/1356/1356326.png" width="50" height="50"
+                    >
+                </div>
                 <div class="rev">
                     <span class="revDesc">Name</span> 
-                    <input class="inputN" type="text" id="name"></div>
+                    <input class="inputN" type="text" id="Name"></div>
                 <div class="rev">
                     <span class="revDesc">Date</span> 
-                    <input class="inputD" type="date" id="date"></div>
+                    <input class="inputD" type="date" id="Date"></div>
                 <div class="rev">
                     <span class="revDesc">Rate</span> 
-                    <select class="inputR" id="rating">
+                    <select class="inputR" id="Rating">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -85,8 +88,8 @@
                     </select>
                 </div>
                 <div class="rev">
-                    <span class="revDesc">Feedback</span> 
-                    <input id="text" rows="3" class="feedback">
+                    <span>Feedback</span> 
+                    <input id="Text" rows="3" class="feedback">
                 </div>
                 <button type="submit" class="revbtn" id="button">Submit</button>
             </form>

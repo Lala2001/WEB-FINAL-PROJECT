@@ -30,13 +30,13 @@ window.reviewData = [
         text: 'Thank you for the tips. It helped'
     },
 ];
+const container = document.getElementById("reviewData");
+container.innerHTML = "";
+
+const review_Container = document.createElement("div");
+review_Container.innerHTML = "";
 
 function displayReview(){
-    const container = document.getElementById("reviewData");
-    container.innerHTML = "";
-
-    const review_Container = document.createElement("div");
-    review_Container.innerHTML = "";
     reviewData.forEach((r) => {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -44,7 +44,7 @@ function displayReview(){
         card.style.backgroundColor = "cadetblue";
         card.style.border = "1px rgb(26, 51, 58) solid"
 
-        const rName = document.createElement("h4");
+        const rName = document.createElement("h3");
         rName.innerHTML = r.name;
         rName.style.marginLeft = "10px"
         card.appendChild(rName);
@@ -60,26 +60,9 @@ function displayReview(){
         card.appendChild(rRate);
 
         const rText = document.createElement("p");
-        rText.innerHTML =  r.text
+        rText.innerHTML =  "Feedback: " + r.text
         rText.style.marginLeft = "10px"
         card.appendChild(rText);
-
-        const nav = document.getElementById("newReview");
-        const reviewButton = document.getElementById("button");
-        const nName = document.getElementById("name");
-        const nDate = document.getElementById("date");
-        const nRate = document.getElementById("rating");
-        const nText = document.getElementById("text");
-        nName === r.name;
-        nDate === r.date;
-        nRate === r.rating;
-        nText === r.text;
-        reviewButton.onclick = () => {
-            card.appendChild(nName)
-            card.appendChild(nDate);
-            card.appendChild(nRate);
-            card.appendChild(nText);
-        }
 
         review_Container.appendChild(card);
         review_Container.style.display = "grid";
@@ -93,4 +76,30 @@ function displayReview(){
     });
 }
 console.log(displayReview())
+
+const reviewButton = document.getElementById("button")     
+const nName = document.getElementById("Name");
+const nDate = document.getElementById("Date");
+const nRate = document.getElementById("Rating");
+const nText = document.getElementById("Text");
+nName === r.name;
+nDate === r.date;
+nRate === r.rating;
+nText === r.text;
+reviewButton.onclick = () => {
+    card.appendChild(nName)
+    card.appendChild(nDate);
+    card.appendChild(nRate);
+    card.appendChild(nText);
+    review_Container.appendChild(card)
+    review_Container.appendChild(card);
+    review_Container.style.display = "grid";
+    review_Container.style.gridTemplateColumns = "1fr 1fr";
+    review_Container.style.justifyContent = "center"
+
+    container.appendChild(review_Container);
+    container.style.marginLeft = "200px"
+    container.style.marginRight = "200px"
+    console.log(container); 
+}
 
