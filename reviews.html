@@ -13,8 +13,10 @@
                 <a href="./about.html"><button style="margin-right: 50px; background-color: rgb(26, 51, 58); color: white" type="button" class="btn btn-primary">About</button></a>
             </div>
         </div>
+        <div id="reviewData"></div>
 
-        <div id="reviewData">
+        <div style="margin-left: 200px; margin-right: 200px;">
+            <div id="newAdd"></div>
         </div>
 
         <style>
@@ -89,13 +91,14 @@
                 </div>
                 <div class="rev">
                     <span>Feedback</span> 
-                    <input id="Text" rows="3" class="feedback">
+                    <input type="text" id="Text" rows="3" class="feedback">
                 </div>
-                <button type="submit" class="revbtn" id="button">Submit</button>
+                <input type="button" class="revbtn" id="submit-button" value="Submit" onclick="insertReview()">
             </form>
             </div>
         </div>
         </div>
+          
     </body>
     <script src="data.js"></script>
 </html>

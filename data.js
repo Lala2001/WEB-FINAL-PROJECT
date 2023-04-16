@@ -29,6 +29,12 @@ window.reviewData = [
         rating: 4,
         text: 'Thank you for the tips. It helped'
     },
+    {
+        name: 'Lina',
+        date: '2023-03-16',
+        rating: 5,
+        text: 'Helpful information. Thanks!'
+    },
 ];
 const container = document.getElementById("reviewData");
 container.innerHTML = "";
@@ -77,29 +83,47 @@ function displayReview(){
 }
 console.log(displayReview())
 
-const reviewButton = document.getElementById("button")     
+const newRev = document.getElementById("newAdd");
 const nName = document.getElementById("Name");
 const nDate = document.getElementById("Date");
 const nRate = document.getElementById("Rating");
 const nText = document.getElementById("Text");
-nName === r.name;
-nDate === r.date;
-nRate === r.rating;
-nText === r.text;
-reviewButton.onclick = () => {
-    card.appendChild(nName)
-    card.appendChild(nDate);
-    card.appendChild(nRate);
-    card.appendChild(nText);
-    review_Container.appendChild(card)
-    review_Container.appendChild(card);
-    review_Container.style.display = "grid";
-    review_Container.style.gridTemplateColumns = "1fr 1fr";
-    review_Container.style.justifyContent = "center"
+function insertReview() {
+    var nameI = nName.value
+    var dateI = nDate.value
+    var rateI = nRate.value
+    var textI = nText.value
 
-    container.appendChild(review_Container);
-    container.style.marginLeft = "200px"
-    container.style.marginRight = "200px"
-    console.log(container); 
+    var card = document.createElement("div");
+    card.classList.add("card");
+    card.style.margin = "10px";
+    card.style.backgroundColor = "cadetblue";
+    card.style.border = "1px rgb(26, 51, 58) solid"
+
+    const Name = document.createElement("h3");
+    Name.innerHTML = nameI;
+    Name.style.marginLeft = "10px"
+    card.appendChild(Name);
+
+    const Date = document.createElement("p");
+    Date.innerHTML = "Date: " + dateI;
+    Date.style.marginLeft = "10px"
+    card.appendChild(Date);
+
+    const Rate = document.createElement("p");
+    Rate.innerHTML = "Rating: " + rateI
+    Rate.style.marginLeft = "10px"
+    card.appendChild(Rate);
+
+    const Text = document.createElement("p");
+    Text.innerHTML =  "Feedback: " + textI
+    Text.style.marginLeft = "10px"
+    card.appendChild(Text);
+
+    newRev.appendChild(card);
+    newRev.style.display = "grid";
+    newRev.style.gridTemplateColumns = "1fr 1fr";
+    newRev.style.justifyContent = "center"
 }
+
 
